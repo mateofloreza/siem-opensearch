@@ -1,0 +1,1 @@
+for file in opensearch_bulk/bulk_*.json; do echo "\nIngesting $file..."; curl -k -XPOST https://REPLACE_USER:REPLACE_PASS@REPLACE_IP_OPENSEARCH:9200/_bulk -H "Content-Type: application/json" --data-binary "@$file";done
